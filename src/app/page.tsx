@@ -94,9 +94,11 @@ export default function Home() {
           </div>
         </div>
 
+        
+
         <div className="d-flex gap-2 my-2">
           <img
-            src="/profileImages/lisa.jpg"
+            src="/profileImages/charliebrown.jpg"
             width="48"
             height="48"
             className="rounded-circle"
@@ -107,13 +109,13 @@ export default function Home() {
             style={{ backgroundColor: "#3A3B3C" }}
           >
             <span className="fw-semibold" style={{ color: "#E4E6EB" }}>
-              Lisa
+            Charlie Brown
             </span>
             <br />
-            <span style={{ color: "#E4E6EB" }}>จริงค่า</span>
+            <span style={{ color: "#E4E6EB" }}>บ้าไปแล้ว</span>
             <div className="d-flex align-items-center gap-1">
               <img src="/like.svg" width={20}></img>
-              <span style={{ color: "#B0B3B8" }}>999 คน</span>
+              <span style={{ color: "#B0B3B8" }}>888</span>
             </div>
           </div>
         </div>
