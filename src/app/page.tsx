@@ -1,6 +1,13 @@
 "use client";
 
+import React from "react";
+import { useEffect, useState } from "react";
+import PostOwnner from "@/components/PostOwnner";
+import { comments } from "@/libs/comments";
+import { ReplyProps } from "@/libs/types";
+
 export default function Home() {
+  const [comments, setComment] = useState<UserCommentProps[] | null>(null);
   return (
     <div
       style={{ minHeight: "100vh", backgroundColor: "#18191A" }}
@@ -15,14 +22,14 @@ export default function Home() {
         <div className="vstack gap-3">
           <div className="d-flex align-items-center gap-3">
             <img
-              src="/profileImages/handsome.jpg"
+              src="/profileImages/Yosita.png"
               width="48"
               height="48"
               className="rounded-circle"
               style={{ objectFit: "cover" }}
             />
             <span className="fw-semibold fs-5 text-white">
-              Chayanin Suatap 650610560
+              Yosita Satiman 660610788
             </span>
           </div>
 
@@ -88,6 +95,7 @@ export default function Home() {
         </div>
 
         {/* map-loop render Comment component here */}
+        {users && !isLoading && comments.map((user: UserCardProps) => (<UserCard key={user.email} {...user}/>))}
       </div>
     </div>
   );
